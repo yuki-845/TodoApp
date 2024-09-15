@@ -34,6 +34,7 @@
 		5C6C511D2C96141A00E266FF /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C51062C96141A00E266FF /* SF-Pro-Display-Semibold.otf */; };
 		5C6C51202C961B5200E266FF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C511F2C961B5200E266FF /* TodoItem.swift */; };
 		5C6C51222C969F0F00E266FF /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C51212C969F0F00E266FF /* KeyboardResponder.swift */; };
+		5C6C51272C97AA0C00E266FF /* DraggableHalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C51262C97AA0C00E266FF /* DraggableHalfModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		5C6C511E2C96143C00E266FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C6C511F2C961B5200E266FF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		5C6C51212C969F0F00E266FF /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		5C6C51262C97AA0C00E266FF /* DraggableHalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableHalfModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +116,11 @@
 		4CACEBAC2BB04FBC009F3D6C /* Live2DSample */ = {
 			isa = PBXGroup;
 			children = (
+				5C6C51232C97A82B00E266FF /* Function */,
 				5C6C511E2C96143C00E266FF /* Info.plist */,
 				4CACEBAD2BB04FBC009F3D6C /* Live2DSampleApp.swift */,
 				4CACEBAF2BB04FBC009F3D6C /* ContentView.swift */,
+				5C6C51262C97AA0C00E266FF /* DraggableHalfModalView.swift */,
 				4CFF845D2BE179C5006A6008 /* Live2DView.swift */,
 				4CFF845F2BE179EC006A6008 /* MetalShaderTypes.h */,
 				4CFF845B2BE1794E006A6008 /* MetalShaders.metal */,
@@ -159,6 +163,13 @@
 				5C6C510B2C96141A00E266FF /* SF-Pro-Display-UltralightItalic.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5C6C51232C97A82B00E266FF /* Function */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Function;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6C51202C961B5200E266FF /* TodoItem.swift in Sources */,
+				5C6C51272C97AA0C00E266FF /* DraggableHalfModalView.swift in Sources */,
 				4CFF845E2BE179C5006A6008 /* Live2DView.swift in Sources */,
 				4CACEBB02BB04FBC009F3D6C /* ContentView.swift in Sources */,
 				4CACEBAE2BB04FBC009F3D6C /* Live2DSampleApp.swift in Sources */,
