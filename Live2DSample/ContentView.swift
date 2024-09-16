@@ -44,6 +44,52 @@ struct ContentView: View {
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 2.2)
                     
+                    ZStack {
+                        
+                           
+                        
+                        Image("RUKAPATH2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width / 2)
+                            .offset(x: -7, y: 7)
+                        Image("RUKAPATH")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width / 2)
+                        VStack {
+                            Spacer().frame(height: geometry.size.height / 55)
+                            HStack {
+                                Spacer().frame(width: geometry.size.width / 13)
+                                Rectangle()
+                                    .frame(width: 2, height: 15)
+                                    .foregroundColor(Color.red)
+                                Spacer().frame(width: geometry.size.width / 150)
+                                Text("茅森るか")
+                                    .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 28.5))
+                                    .foregroundColor(Color("MainColor"))
+                                    
+                                Spacer()
+                            }
+              
+                            Spacer().frame(height: geometry.size.height / 160)
+                            HStack {
+                                Spacer().frame(width: geometry.size.width / 13)
+                                Text("今日はいい天気だなーーーーーーーーーーーーーーーーーーーーーーーー")
+                                    .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 30))
+                                    .foregroundColor(Color("MainColor"))
+                                    .frame(width: geometry.size.width / 3)
+                                Spacer()
+                            }
+                            
+                            Spacer()
+                        }
+                        
+                        
+                    }
+                    .frame(width: geometry.size.width / 2, height: (geometry.size.width / 2) / 1.8697)
+                    .position(x: geometry.size.width / 1.5, y: geometry.size.height * 0.4)
+                    
                     // モーダル表示のビュー
                     DraggableHalfModalView(isPresented: $isModalPresented, inputText: $inputText, isTextFieldFocused: $isTextFieldFocused, editingTodo: $editingTodo, isNewTodo: $isNewTodo)
                         .transition(.move(edge: .bottom))

@@ -13,7 +13,7 @@ struct TabeView: View {
     init() {
         let appearance: UITabBarAppearance = UITabBarAppearance()
         appearance.backgroundColor = UIColor(red: 20 / 255, green: 54 / 255, blue: 62 / 255, alpha: 1.0)
-
+        UITabBar.appearance().unselectedItemTintColor = .green.withAlphaComponent(1)
         UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().standardAppearance = appearance
     }
@@ -33,9 +33,8 @@ struct TabeView: View {
                         .foregroundColor(.white)
                     Text("キャラ選択")
                 }
-                .badge(5)
-            
         }
+        .accentColor(.white)
     }
 }
 
