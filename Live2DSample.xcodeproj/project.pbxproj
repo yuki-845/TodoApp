@@ -38,6 +38,7 @@
 		5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C51282C97CAF500E266FF /* CustomTextField.swift */; };
 		5C6C512B2C97D41800E266FF /* CharacterSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */; };
 		5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512C2C97D8AB00E266FF /* TabedView.swift */; };
+		5C6C512F2C97E2C000E266FF /* Live2DView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512E2C97E2C000E266FF /* Live2DView 2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		5C6C51282C97CAF500E266FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectView.swift; sourceTree = "<group>"; };
 		5C6C512C2C97D8AB00E266FF /* TabedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabedView.swift; sourceTree = "<group>"; };
+		5C6C512E2C97E2C000E266FF /* Live2DView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Live2DView 2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				5C6C512C2C97D8AB00E266FF /* TabedView.swift */,
 				5C6C51262C97AA0C00E266FF /* DraggableHalfModalView.swift */,
 				4CFF845D2BE179C5006A6008 /* Live2DView.swift */,
+				5C6C512E2C97E2C000E266FF /* Live2DView 2.swift */,
 				4CFF845F2BE179EC006A6008 /* MetalShaderTypes.h */,
 				4CFF845B2BE1794E006A6008 /* MetalShaders.metal */,
 				4C1682922BE1706F0014FC58 /* res */,
@@ -277,6 +280,7 @@
 			files = (
 				5C6C51202C961B5200E266FF /* TodoItem.swift in Sources */,
 				5C6C51272C97AA0C00E266FF /* DraggableHalfModalView.swift in Sources */,
+				5C6C512F2C97E2C000E266FF /* Live2DView 2.swift in Sources */,
 				5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */,
 				5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */,
 				4CFF845E2BE179C5006A6008 /* Live2DView.swift in Sources */,
@@ -429,6 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +441,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.sabab.Live2DSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 5.0;
@@ -460,6 +469,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +477,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.sabab.Live2DSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 5.0;

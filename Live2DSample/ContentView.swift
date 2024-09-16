@@ -13,7 +13,7 @@ let screenHeight = UIScreen.main.bounds.height
 
 
 // ContentView の定義
-struct MainView: View {
+struct ContentView: View {
     @State private var isModalPresented = true
     @State private var isTextFieldVisible = false
     @State private var inputText = ""

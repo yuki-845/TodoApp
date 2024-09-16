@@ -11,7 +11,7 @@ struct Live2DSampleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabeView()
                 .modelContainer(for: Todo.self)
         }
         .onChange(of: scenePhase) { newPhase in
