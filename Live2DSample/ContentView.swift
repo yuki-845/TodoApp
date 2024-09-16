@@ -39,7 +39,7 @@ struct ContentView: View {
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 5)
                     
                     // Live2DView の表示
-                    Live2DView()
+                    HiyoriView()
                         .shadow(color: Color.red, radius: 0, x: -7, y: 0)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 2.2)
