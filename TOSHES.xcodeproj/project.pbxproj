@@ -44,7 +44,7 @@
 		4C1682922BE1706F0014FC58 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		4C551F622BB0653300E2E7FD /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		4C551F642BB0653900E2E7FD /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		4CACEBAA2BB04FBC009F3D6C /* Live2DSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Live2DSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CACEBAA2BB04FBC009F3D6C /* TOSHES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOSHES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CACEBAD2BB04FBC009F3D6C /* Live2DSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DSampleApp.swift; sourceTree = "<group>"; };
 		4CACEBAF2BB04FBC009F3D6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CACEBB42BB04FBD009F3D6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		4CACEBAB2BB04FBC009F3D6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CACEBAA2BB04FBC009F3D6C /* Live2DSample.app */,
+				4CACEBAA2BB04FBC009F3D6C /* TOSHES.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4CACEBA92BB04FBC009F3D6C /* Live2DSample */ = {
+		4CACEBA92BB04FBC009F3D6C /* TOSHES */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CACEBB82BB04FBD009F3D6C /* Build configuration list for PBXNativeTarget "Live2DSample" */;
+			buildConfigurationList = 4CACEBB82BB04FBD009F3D6C /* Build configuration list for PBXNativeTarget "TOSHES" */;
 			buildPhases = (
 				4CACEBA62BB04FBC009F3D6C /* Sources */,
 				4CACEBA72BB04FBC009F3D6C /* Frameworks */,
@@ -196,12 +196,12 @@
 			);
 			dependencies = (
 			);
-			name = Live2DSample;
+			name = TOSHES;
 			packageProductDependencies = (
 				4C24DDDC2BE1838500B5C6A4 /* Live2DMetal */,
 			);
 			productName = Live2DSample;
-			productReference = 4CACEBAA2BB04FBC009F3D6C /* Live2DSample.app */;
+			productReference = 4CACEBAA2BB04FBC009F3D6C /* TOSHES.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4CACEBA52BB04FBC009F3D6C /* Build configuration list for PBXProject "Live2DSample" */;
+			buildConfigurationList = 4CACEBA52BB04FBC009F3D6C /* Build configuration list for PBXProject "TOSHES" */;
 			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CACEBA92BB04FBC009F3D6C /* Live2DSample */,
+				4CACEBA92BB04FBC009F3D6C /* TOSHES */,
 			);
 		};
 /* End PBXProject section */
@@ -487,7 +487,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CACEBA52BB04FBC009F3D6C /* Build configuration list for PBXProject "Live2DSample" */ = {
+		4CACEBA52BB04FBC009F3D6C /* Build configuration list for PBXProject "TOSHES" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CACEBB62BB04FBD009F3D6C /* Debug */,
@@ -496,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CACEBB82BB04FBD009F3D6C /* Build configuration list for PBXNativeTarget "Live2DSample" */ = {
+		4CACEBB82BB04FBD009F3D6C /* Build configuration list for PBXNativeTarget "TOSHES" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CACEBB92BB04FBD009F3D6C /* Debug */,
