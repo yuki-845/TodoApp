@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharcterSelectView: View {
+struct CharacterSelectView: View {
     var body: some View {
         Live2DView()
             .shadow(color: Color.red, radius: 0, x: -7, y: 0)
@@ -16,5 +16,5 @@ struct CharcterSelectView: View {
 }
 
 #Preview {
-    CharcterSelectView()
+    CharacterSelectView()
 }

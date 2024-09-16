@@ -1,18 +1,46 @@
-//
-//  SwiftUIView.swift
-//  Live2DSample
-//
-//  Created by 平井悠貴 on 2024/09/16.
-//
-
 import SwiftUI
+import UIKit
 
-struct SwiftUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CustomTextField: UIViewRepresentable {
+    @Binding var text: String
+    @Binding var isFocused: Bool
+
+    class Coordinator: NSObject, UITextFieldDelegate {
+        var parent: CustomTextField
+
+        init(_ parent: CustomTextField) {
+            self.parent = parent
+        }
+
+        func textFieldDidChangeSelection(_ textField: UITextField) {
+            parent.text = textField.text ?? ""
+        }
+
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            // Returnキーが押されたときにフォーカスを維持
+            textField.resignFirstResponder()
+            textField.becomeFirstResponder()  // キーボードを維持する
+            return false  // trueだとフォーカスが失われ、キーボードが閉じる
+        }
     }
-}
 
-#Preview {
-    SwiftUIView()
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(self)
+    }
+
+    func makeUIView(context: Context) -> UITextField {
+        let textField = UITextField()
+        textField.delegate = context.coordinator
+        textField.borderStyle = .roundedRect
+        return textField
+    }
+
+    func updateUIView(_ uiView: UITextField, context: Context) {
+        uiView.text = text
+        if isFocused {
+            uiView.becomeFirstResponder()
+        } else {
+            uiView.resignFirstResponder()
+        }
+    }
 }

@@ -11,9 +11,9 @@ let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
 
-import SwiftUI
 
-struct ContentView: View {
+// ContentView の定義
+struct MainView: View {
     @State private var isModalPresented = true
     @State private var isTextFieldVisible = false
     @State private var inputText = ""
@@ -23,6 +23,9 @@ struct ContentView: View {
     @Environment(\.modelContext) private var context
     @Query private var todos: [Todo]
     @State private var showAlert = false  // アラートの表示フラグ
+    @State private var editingTodo: Todo? = nil  // 編集中のTodo
+    @State private var isNewTodo = false  // 新しいTodoを作成中かどうか
+
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -32,7 +35,7 @@ struct ContentView: View {
                     Image("RUKA")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width) // GeometryReaderの幅に合わせる
+                        .frame(width: geometry.size.width)
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 5)
                     
                     // Live2DView の表示
@@ -42,130 +45,150 @@ struct ContentView: View {
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 2.2)
                     
                     // モーダル表示のビュー
-                    DraggableHalfModalView(isPresented: $isModalPresented, inputText: $inputText)
+                    DraggableHalfModalView(isPresented: $isModalPresented, inputText: $inputText, isTextFieldFocused: $isTextFieldFocused, editingTodo: $editingTodo, isNewTodo: $isNewTodo)
                         .transition(.move(edge: .bottom))
                         .animation(.easeInOut)
+                    
+                    // 編集用または新規用のテキストフィールドを表示
+                    if let editingTodo = editingTodo {
+                        TextField("Edit text", text: Binding(
+                            get: { editingTodo.content },
+                            set: { newValue in
+                                self.editingTodo?.content = newValue
+                            }
+                        ))
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .focused($isTextFieldFocused)
+                        .onSubmit {
+                            saveTodoEdit()
+                        }
+                    } else if isNewTodo {
+                        
+                        TextField("New todo", text: $inputText)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                            .focused($isTextFieldFocused)
+                            .onSubmit {
+                                if(inputText.isEmpty) {
+                                    isNewTodo = false
+                                    isTextFieldFocused = false
+                                    isTextFieldVisible = false
+                                }else {
+                                    addNewTodo()
+                                }
+                                
+                            }
+                    }
                     
                     // プラスボタン
                     Button {
                         isTextFieldVisible = true
+                        isNewTodo = true  // 新しいTodo作成モードに入る
                         isTextFieldFocused = true // キーボードを自動的に表示する
                     } label: {
                         ZStack {
                             Circle()
-                                .fill(Color("MainColor")) // 中身の色を設定
+                                .fill(Color("MainColor"))
                                 .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
                             Image(systemName: "plus")
                                 .font(.title)
-                                .foregroundColor(Color.white)
+                                .foregroundColor(.white)
                         }
-                        
                     }
                     .position(x: geometry.size.width - ((geometry.size.width / 7) / 2 + geometry.size.width * 0.02),
                               y: geometry.size.height - ((geometry.size.width / 7) / 2 + geometry.size.width * 0.12))
                     
+                    // 削除ボタン
                     Button {
-                        let complete = todos.filter { $0.isDone }  // 完了済みの Todo をフィルタリング
+                        let complete = todos.filter { $0.isDone }
                         
                         if complete.isEmpty {
-                            // 全て削除のアラートを表示
                             showAlert = true
                         } else {
-                            // 完了済みの Todo を削除
                             deleteCompletedTodos()
                         }
                     } label: {
                         ZStack {
                             Circle()
-                                .fill(Color.white) // 中身の色を設定
+                                .fill(Color.white)
                                 .overlay(
                                     Circle()
-                                        .stroke(Color("MainColor"), lineWidth: 1) // 枠線
+                                        .stroke(Color("MainColor"), lineWidth: 1)
                                 )
                                 .frame(width: geometry.size.width / 8, height: geometry.size.width / 8)
                             
                             Image(systemName: "trash")
                                 .font(.title2)
-                                .foregroundColor(todos.isEmpty ? Color.gray : Color("MainColor"))  // todos.isEmpty で
+                                .foregroundColor(todos.isEmpty ? Color.gray : Color("MainColor"))
                         }
                     }
                     .disabled(todos.isEmpty)  // todos が空のときはボタンを無効化
                     .position(x: geometry.size.width / 10,
                               y: geometry.size.height - ((geometry.size.width / 7) / 2 + geometry.size.width * 0.12))
                     .alert(isPresented: $showAlert) {
-                        // すべて削除の確認アラート
                         Alert(
                             title: Text("すべて削除しますか？"),
                             message: Text("この操作は取り消せません。"),
                             primaryButton: .destructive(Text("削除")) {
-                                deleteAllTodos()  // すべての Todo を削除
+                                deleteAllTodos()
                             },
-                            secondaryButton: .cancel(Text("キャンセル"))
+                            secondaryButton: .cancel()
                         )
-                    }
-                    
-                    // テキストフィールドの表示
-                    if isTextFieldVisible {
-                        TextField("Enter text", text: $inputText)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding()
-                            .focused($isTextFieldFocused)
-                            .onSubmit {
-                                // エンターキーが押されたときの処理
-                                print("エンターキーが押されました: \($inputText)")
-                                isEnter = true
-                                add(todo: inputText)
-                                inputText = ""
-                            }
-                        
                     }
                 }
                 Spacer()
             }
-            .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
-                //self.state = "Opened"
-            }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
-                //self.state = "Closed"
-                
-                isEnter = false
-            }
             .onTapGesture {
-                // キーボードを閉じる
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                if(isTextFieldFocused) {
+                if isTextFieldFocused {
                     isTextFieldFocused = false
                     isTextFieldVisible = false
-                    
+                    isNewTodo = false
+                    editingTodo = nil
                 }
             }
         }
-        .ignoresSafeArea(.keyboard, edges: .bottom) // キーボードのUIを無視
+        .ignoresSafeArea(.keyboard, edges: .bottom)
     }
-    private func add(todo: String) {
-        let data = Todo(content: todo, isDone: false)
-        context.insert(data)
+    
+    // 新しい Todo を追加する処理
+    private func addNewTodo() {
         
+        let newTodo = Todo(content: inputText, isDone: false)
+        context.insert(newTodo)
+        try? context.save()
+        isNewTodo = true
+        inputText = ""
+        isTextFieldFocused = true
+        isTextFieldVisible = true
+    }
+    
+    // Todoを編集する処理
+    private func saveTodoEdit() {
+        isTextFieldFocused = false
+        isTextFieldVisible = false
+        if let editingTodo = editingTodo {
+            try? context.save()  // 変更を保存
+            self.editingTodo = nil  // 編集を終了
+        }
     }
     
     private func deleteCompletedTodos() {
-        let complete = todos.filter { $0.isDone }  // 完了済みの Todo をフィルタリング
+        let complete = todos.filter { $0.isDone }
         for todo in complete {
-            context.delete(todo)  // 完了済みの Todo を削除
+            context.delete(todo)
         }
-        try? context.save()  // 変更を保存
+        try? context.save()
     }
     
-    // すべての Todo を削除する関数
     private func deleteAllTodos() {
-        
         for todo in todos {
-            context.delete(todo)  // 各 Todo を削除
+            context.delete(todo)
         }
-        try? context.save()  // 変更を保存
+        try? context.save()
     }
-    
 }
-
 
 #Preview {
     ContentView()

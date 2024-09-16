@@ -1,0 +1,32 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "ma-sya.moc3",
+		"Textures": [
+			"ma-sya.2048/texture_00.png"
+		],
+		"DisplayInfo": "ma-sya.cdi3.json",
+        "Motions": {
+            "Idle": [
+                {
+                    "File": "motions/ma-sya_m01.motion3.json",
+                    "FadeInTime": 0.5,
+                    "FadeOutTime": 0.5
+                },
+            ]
+        }
+	},
+    
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	]
+}
