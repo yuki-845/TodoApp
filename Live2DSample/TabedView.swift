@@ -22,21 +22,37 @@ struct TabeView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Image(systemName: "1.circle")
+                    Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.white)
                     Text("Todo")
                 }
             
             CharacterSelectView()
                 .tabItem {
-                    Image(systemName: "2.circle")
-                        .foregroundColor(.white)
+                    Image(uiImage: resizeImage(named: "SHES", width: 60)) // ここでリサイズしたUIImageを使用
+                                            .renderingMode(.template) // テンプレートモードで色を変更可能に
+                                            .foregroundColor(.green)
                     Text("キャラ選択")
                 }
         }
         .accentColor(.white)
     }
+    func resizeImage(named: String, width: CGFloat) -> UIImage {
+            guard let image = UIImage(named: named) else { return UIImage() }
+            
+            let aspectRatio = image.size.height / image.size.width
+            let size = CGSize(width: width, height: width * aspectRatio)
+            
+            UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+            image.draw(in: CGRect(origin: .zero, size: size))
+            let resizedImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+            UIGraphicsEndImageContext()
+            
+            return resizedImage
+        }
 }
+
+
 
 #Preview {
     TabeView()

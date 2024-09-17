@@ -7,8 +7,7 @@
 import SwiftData
 import Foundation
 
-import SwiftData
-import Foundation
+
 
 @Model
 final class Todo {

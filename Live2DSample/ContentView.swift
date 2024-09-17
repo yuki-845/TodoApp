@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Live2DMetalObjC
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
@@ -25,7 +26,7 @@ struct ContentView: View {
     @State private var showAlert = false  // アラートの表示フラグ
     @State private var editingTodo: Todo? = nil  // 編集中のTodo
     @State private var isNewTodo = false  // 新しいTodoを作成中かどうか
-
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -72,13 +73,13 @@ struct ContentView: View {
                                 Spacer()
                             }
               
-                            Spacer().frame(height: geometry.size.height / 160)
+                            Spacer().frame(height: geometry.size.height / 260)
                             HStack {
-                                Spacer().frame(width: geometry.size.width / 13)
-                                Text("今日はいい天気だなーーーーーーーーーーーーーーーーーーーーーーーー")
+                                Spacer().frame(width: geometry.size.width / 17)
+                                Text("今日はいい天気だなｄｊふぉあｊふぁおｊふぁｊふぉあｊ")
                                     .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 30))
                                     .foregroundColor(Color("MainColor"))
-                                    .frame(width: geometry.size.width / 3)
+                                    .frame(width: geometry.size.width / 2.7)
                                 Spacer()
                             }
                             
@@ -129,6 +130,7 @@ struct ContentView: View {
                     
                     // プラスボタン
                     Button {
+                        
                         isTextFieldVisible = true
                         isNewTodo = true  // 新しいTodo作成モードに入る
                         isTextFieldFocused = true // キーボードを自動的に表示する
