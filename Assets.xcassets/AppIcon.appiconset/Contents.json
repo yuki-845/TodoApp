@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "キャラ選択画面 – 3.png",
+      "filename" : "キャラ選択画面 – 7.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "キャラ選択画面 – 6.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
