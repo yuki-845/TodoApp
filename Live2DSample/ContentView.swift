@@ -10,11 +10,11 @@ import SwiftData
 import Live2DMetalObjC
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
-
-
+//CubismModelSettingJsonファイル GetMotionCount関数めーちゃ大事な
 
 // ContentView の定義
 struct ContentView: View {
+    @AppStorage("CharacterSelect") var CharacterSelect: String = "HiragiMikuro"
     @State private var isModalPresented = true
     @State private var isTextFieldVisible = false
     @State private var inputText = ""
@@ -26,35 +26,35 @@ struct ContentView: View {
     @State private var showAlert = false  // アラートの表示フラグ
     @State private var editingTodo: Todo? = nil  // 編集中のTodo
     @State private var isNewTodo = false  // 新しいTodoを作成中かどうか
-    
+    @State var talk = "";
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
                 ZStack {
                     // 背景画像
-                    Image("RUKA")
+                    Image("\(CharacterSelect)Text")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width)
+                        .frame(width: geometry.size.width * 1.1)
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 5)
                     
                     // Live2DView の表示
-                    HiyoriView()
-                        .shadow(color: Color.red, radius: 0, x: -7, y: 0)
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2.2)
+                    HiragiMikuroView()
+                        .shadow(color: Color("\(CharacterSelect)Color"), radius: 0, x: -7, y: 0)
+                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.1)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     
                     ZStack {
                         
                            
                         
-                        Image("RUKAPATH2")
+                        Image("\(CharacterSelect)PathBack")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width / 2)
                             .offset(x: -7, y: 7)
-                        Image("RUKAPATH")
+                        Image("\(CharacterSelect)Path")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width / 2)
@@ -63,10 +63,10 @@ struct ContentView: View {
                             HStack {
                                 Spacer().frame(width: geometry.size.width / 13)
                                 Rectangle()
-                                    .frame(width: 2, height: 15)
-                                    .foregroundColor(Color.red)
+                                    .frame(width: 2, height: geometry.size.width / 28.5)
+                                    .foregroundColor(Color("\(CharacterSelect)Color"))
                                 Spacer().frame(width: geometry.size.width / 150)
-                                Text("茅森るか")
+                                Text("柊ミロク")
                                     .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 28.5))
                                     .foregroundColor(Color("MainColor"))
                                     
@@ -76,8 +76,8 @@ struct ContentView: View {
                             Spacer().frame(height: geometry.size.height / 260)
                             HStack {
                                 Spacer().frame(width: geometry.size.width / 17)
-                                Text("今日はいい天気だなｄｊふぉあｊふぁおｊふぁｊふぉあｊ")
-                                    .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 30))
+                                Text(talk)
+                                    .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 32))
                                     .foregroundColor(Color("MainColor"))
                                     .frame(width: geometry.size.width / 2.7)
                                 Spacer()
@@ -195,6 +195,12 @@ struct ContentView: View {
                     isNewTodo = false
                     editingTodo = nil
                 }
+                if let randomItem = HiragiMirokuRandomTalk.randomElement() {
+                    talk = randomItem
+                } else {
+                    print("配列が空です。")
+                }
+
             }
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
