@@ -9,15 +9,18 @@ import Foundation
 
 
 
+
 @Model
 final class Todo {
+    var id: UUID
     var content: String
     var isDone: Bool
-    let registerDate: Date
+    var registerDate: Date
 
-    init(content: String, isDone: Bool = false) {
+    init(id: UUID = UUID(), content: String, isDone: Bool = false, registerDate: Date = Date()) {
+        self.id = id
         self.content = content
         self.isDone = isDone
-        registerDate = Date()
+        self.registerDate = registerDate
     }
 }

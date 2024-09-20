@@ -17,8 +17,9 @@ struct TabeView: View {
         UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().standardAppearance = appearance
     }
-        
+    
     var body: some View {
+       
         TabView {
             ContentView()
                 .tabItem {

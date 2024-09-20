@@ -6,6 +6,7 @@ import Live2DMetal
 
 struct HiragiMikuroView: UIViewControllerRepresentable {
     typealias UIViewControllerType = Live2DViewController
+    @AppStorage("CharacterSelect") var CharacterSelect: String = "HiragiMikuro"
 //    var kyara: String
     func makeUIViewController(context: Context) -> Live2DViewController {
         
@@ -20,3 +21,5 @@ struct HiragiMikuroView: UIViewControllerRepresentable {
         
     }
 }
+
+

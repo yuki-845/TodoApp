@@ -11,7 +11,7 @@ import Live2DMetalObjC
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 //CubismModelSettingJsonファイル GetMotionCount関数めーちゃ大事な
-
+//CubismModelSettingJson.
 // ContentView の定義
 struct ContentView: View {
     @AppStorage("CharacterSelect") var CharacterSelect: String = "HiragiMikuro"
@@ -27,6 +27,7 @@ struct ContentView: View {
     @State private var editingTodo: Todo? = nil  // 編集中のTodo
     @State private var isNewTodo = false  // 新しいTodoを作成中かどうか
     @State var talk = "";
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -244,6 +245,3 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}

@@ -18,6 +18,10 @@ struct Live2DSampleApp: App {
             if newPhase == .background {
                 // アプリがバックグラウンドに入ったときにCubismのリソースを解放
                 L2DCubism.dispose()
+                
+            }
+            if newPhase == .active {
+                L2DCubism.initialize()
             }
         }
     }

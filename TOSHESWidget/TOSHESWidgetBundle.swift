@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct TOSHESWidgetBundle: WidgetBundle {
     var body: some Widget {
-        TOSHESWidget()
+        TaskWidget()
         TOSHESWidgetControl()
         TOSHESWidgetLiveActivity()
     }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		4CACEBB02BB04FBC009F3D6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACEBAF2BB04FBC009F3D6C /* ContentView.swift */; };
 		4CFF845C2BE1794E006A6008 /* MetalShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4CFF845B2BE1794E006A6008 /* MetalShaders.metal */; };
 		4CFF845E2BE179C5006A6008 /* Live2DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFF845D2BE179C5006A6008 /* Live2DView.swift */; };
+		5C4C46E02C9D459E00937790 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C46DF2C9D459E00937790 /* WidgetKit.framework */; };
+		5C4C46E22C9D459E00937790 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C46E12C9D459E00937790 /* SwiftUI.framework */; };
+		5C4C46F12C9D45A000937790 /* TOSHESWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5C4C46DE2C9D459E00937790 /* TOSHESWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5C4C46FB2C9D51BE00937790 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C511F2C961B5200E266FF /* TodoItem.swift */; };
+		5C4C46FD2C9D52FB00937790 /* sharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */; };
+		5C4C46FE2C9D52FB00937790 /* sharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */; };
+		5C4C47002C9D756200937790 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FF2C9D756200937790 /* ViewModel.swift */; };
+		5C4C47012C9D756200937790 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FF2C9D756200937790 /* ViewModel.swift */; };
 		5C6C50F82C95F3B400E266FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C50F72C95F3B400E266FF /* Assets.xcassets */; };
 		5C6C510C2C96141A00E266FF /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C51022C96141A00E266FF /* SF-Pro-Display-Medium.otf */; };
 		5C6C510D2C96141A00E266FF /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C50FF2C96141A00E266FF /* SF-Pro-Display-HeavyItalic.otf */; };
@@ -41,6 +49,30 @@
 		5CBE06A62C9C1C9000620E7F /* HiragiMikuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5C4C46EF2C9D45A000937790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CACEBA22BB04FBC009F3D6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C4C46DD2C9D459E00937790;
+			remoteInfo = TOSHESWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C4C46F22C9D45A000937790 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5C4C46F12C9D45A000937790 /* TOSHESWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4C1682922BE1706F0014FC58 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		4C551F622BB0653300E2E7FD /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
@@ -52,6 +84,13 @@
 		4CFF845B2BE1794E006A6008 /* MetalShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShaders.metal; sourceTree = "<group>"; };
 		4CFF845D2BE179C5006A6008 /* Live2DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DView.swift; sourceTree = "<group>"; };
 		4CFF845F2BE179EC006A6008 /* MetalShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalShaderTypes.h; sourceTree = "<group>"; };
+		5C4C46DE2C9D459E00937790 /* TOSHESWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TOSHESWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4C46DF2C9D459E00937790 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5C4C46E12C9D459E00937790 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5C4C46F92C9D514700937790 /* TOSHESWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TOSHESWidgetExtension.entitlements; sourceTree = "<group>"; };
+		5C4C46FA2C9D518000937790 /* TOSHES.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TOSHES.entitlements; sourceTree = "<group>"; };
+		5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedModelContainer.swift; sourceTree = "<group>"; };
+		5C4C46FF2C9D756200937790 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5C6C50F72C95F3B400E266FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6C50FA2C96141A00E266FF /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		5C6C50FB2C96141A00E266FF /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -81,12 +120,35 @@
 		5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiragiMikuro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5C4C46F52C9D45A000937790 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5C4C46DD2C9D459E00937790 /* TOSHESWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5C4C46E32C9D459E00937790 /* TOSHESWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5C4C46F52C9D45A000937790 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TOSHESWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		4CACEBA72BB04FBC009F3D6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C24DDDD2BE1838500B5C6A4 /* Live2DMetal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4C46DB2C9D459E00937790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4C46E22C9D459E00937790 /* SwiftUI.framework in Frameworks */,
+				5C4C46E02C9D459E00937790 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +160,8 @@
 			children = (
 				4C551F642BB0653900E2E7FD /* Metal.framework */,
 				4C551F622BB0653300E2E7FD /* MetalKit.framework */,
+				5C4C46DF2C9D459E00937790 /* WidgetKit.framework */,
+				5C4C46E12C9D459E00937790 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,9 +169,12 @@
 		4CACEBA12BB04FBC009F3D6C = {
 			isa = PBXGroup;
 			children = (
+				5C4C46FA2C9D518000937790 /* TOSHES.entitlements */,
+				5C4C46F92C9D514700937790 /* TOSHESWidgetExtension.entitlements */,
 				5C6C50F92C9613B100E266FF /* Fonts */,
 				5C6C50F72C95F3B400E266FF /* Assets.xcassets */,
 				4CACEBAC2BB04FBC009F3D6C /* Live2DSample */,
+				5C4C46E32C9D459E00937790 /* TOSHESWidget */,
 				4CACEBAB2BB04FBC009F3D6C /* Products */,
 				4C551F612BB0653300E2E7FD /* Frameworks */,
 			);
@@ -117,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4CACEBAA2BB04FBC009F3D6C /* TOSHES.app */,
+				5C4C46DE2C9D459E00937790 /* TOSHESWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +196,7 @@
 				5C6C51232C97A82B00E266FF /* Function */,
 				5C6C511E2C96143C00E266FF /* Info.plist */,
 				4CACEBAD2BB04FBC009F3D6C /* Live2DSampleApp.swift */,
+				5C4C46FF2C9D756200937790 /* ViewModel.swift */,
 				5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */,
 				4CACEBAF2BB04FBC009F3D6C /* ContentView.swift */,
 				5C6C512C2C97D8AB00E266FF /* TabedView.swift */,
@@ -138,6 +207,7 @@
 				4C1682922BE1706F0014FC58 /* res */,
 				4CACEBB32BB04FBD009F3D6C /* Preview Content */,
 				5C6C511F2C961B5200E266FF /* TodoItem.swift */,
+				5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */,
 				5C6C51212C969F0F00E266FF /* KeyboardResponder.swift */,
 			);
 			path = Live2DSample;
@@ -202,10 +272,12 @@
 				4CACEBA62BB04FBC009F3D6C /* Sources */,
 				4CACEBA72BB04FBC009F3D6C /* Frameworks */,
 				4CACEBA82BB04FBC009F3D6C /* Resources */,
+				5C4C46F22C9D45A000937790 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5C4C46F02C9D45A000937790 /* PBXTargetDependency */,
 			);
 			name = TOSHES;
 			packageProductDependencies = (
@@ -215,6 +287,28 @@
 			productReference = 4CACEBAA2BB04FBC009F3D6C /* TOSHES.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C4C46DD2C9D459E00937790 /* TOSHESWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4C46F62C9D45A000937790 /* Build configuration list for PBXNativeTarget "TOSHESWidgetExtension" */;
+			buildPhases = (
+				5C4C46DA2C9D459E00937790 /* Sources */,
+				5C4C46DB2C9D459E00937790 /* Frameworks */,
+				5C4C46DC2C9D459E00937790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5C4C46E32C9D459E00937790 /* TOSHESWidget */,
+			);
+			name = TOSHESWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TOSHESWidgetExtension;
+			productReference = 5C4C46DE2C9D459E00937790 /* TOSHESWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,11 +316,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					4CACEBA92BB04FBC009F3D6C = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					5C4C46DD2C9D459E00937790 = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -247,6 +344,7 @@
 			projectRoot = "";
 			targets = (
 				4CACEBA92BB04FBC009F3D6C /* TOSHES */,
+				5C4C46DD2C9D459E00937790 /* TOSHESWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +377,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C4C46DC2C9D459E00937790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,10 +392,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6C51202C961B5200E266FF /* TodoItem.swift in Sources */,
+				5C4C46FD2C9D52FB00937790 /* sharedModelContainer.swift in Sources */,
 				5C6C51272C97AA0C00E266FF /* DraggableHalfModalView.swift in Sources */,
 				5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */,
 				5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */,
 				4CFF845E2BE179C5006A6008 /* Live2DView.swift in Sources */,
+				5C4C47002C9D756200937790 /* ViewModel.swift in Sources */,
 				4CACEBB02BB04FBC009F3D6C /* ContentView.swift in Sources */,
 				4CACEBAE2BB04FBC009F3D6C /* Live2DSampleApp.swift in Sources */,
 				4CFF845C2BE1794E006A6008 /* MetalShaders.metal in Sources */,
@@ -300,7 +407,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C4C46DA2C9D459E00937790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4C46FE2C9D52FB00937790 /* sharedModelContainer.swift in Sources */,
+				5C4C46FB2C9D51BE00937790 /* TodoItem.swift in Sources */,
+				5C4C47012C9D756200937790 /* ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C4C46F02C9D45A000937790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C4C46DD2C9D459E00937790 /* TOSHESWidgetExtension */;
+			targetProxy = 5C4C46EF2C9D45A000937790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4CACEBB62BB04FBD009F3D6C /* Debug */ = {
@@ -429,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
@@ -467,6 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
@@ -500,6 +627,64 @@
 			};
 			name = Release;
 		};
+		5C4C46F32C9D45A000937790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YTQW99BMDM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TOSHESWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TOSHESWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C4C46F42C9D45A000937790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YTQW99BMDM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TOSHESWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TOSHESWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +702,15 @@
 			buildConfigurations = (
 				4CACEBB92BB04FBD009F3D6C /* Debug */,
 				4CACEBBA2BB04FBD009F3D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4C46F62C9D45A000937790 /* Build configuration list for PBXNativeTarget "TOSHESWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4C46F32C9D45A000937790 /* Debug */,
+				5C4C46F42C9D45A000937790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
