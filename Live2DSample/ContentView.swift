@@ -8,13 +8,18 @@
 import SwiftUI
 import SwiftData
 import Live2DMetalObjC
+import WidgetKit
+import Live2DMetal
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 //CubismModelSettingJsonファイル GetMotionCount関数めーちゃ大事な
 //CubismModelSettingJson.
 // ContentView の定義
+
+
+   
 struct ContentView: View {
-    @AppStorage("CharacterSelect") var CharacterSelect: String = "HiragiMikuro"
+    @EnvironmentObject var characterManager: CharacterManager
     @State private var isModalPresented = true
     @State private var isTextFieldVisible = false
     @State private var inputText = ""
@@ -27,6 +32,8 @@ struct ContentView: View {
     @State private var editingTodo: Todo? = nil  // 編集中のTodo
     @State private var isNewTodo = false  // 新しいTodoを作成中かどうか
     @State var talk = "";
+    @State private var hiyoriViewController: Live2DViewController?
+    @State var isActive = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -34,28 +41,44 @@ struct ContentView: View {
                 Spacer()
                 ZStack {
                     // 背景画像
-                    Image("\(CharacterSelect)Text")
+                    Image("\(characterManager.characterSelect)Text")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: geometry.size.width * 1.1)
                         .position(x: geometry.size.width / 2, y: geometry.size.height / 5)
                     
-                    // Live2DView の表示
-                    HiragiMikuroView()
-                        .shadow(color: Color("\(CharacterSelect)Color"), radius: 0, x: -7, y: 0)
-                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.1)
-                        .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                    //                     Live2DView の表示
+                    //
+                    
+                    if characterManager.characterList[0].isSelected {
+                        HiragiMirokuView()
+                            .shadow(color: Color("\(characterManager.characterSelect)Color"), radius: 0, x: -7, y: 0)
+                            .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.1)
+                            .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                        
+                    }
+                    
+                    if characterManager.characterList[1].isSelected {
+                        HiyoriView(isActive: $isActive)
+                    }
+                    
+                    
+                    
+                    //                        .onAppear {
+                    //                            // HiyoriViewのインスタンスを取得
+                    //                            hiyoriViewController = Live2DViewController(resourcesPath: "res/", modelName: "Hiyori")
+                    //                        }
                     
                     ZStack {
                         
-                           
                         
-                        Image("\(CharacterSelect)PathBack")
+                        
+                        Image("\(characterManager.characterSelect)PathBack")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width / 2)
                             .offset(x: -7, y: 7)
-                        Image("\(CharacterSelect)Path")
+                        Image("\(characterManager.characterSelect)Path")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width / 2)
@@ -65,15 +88,15 @@ struct ContentView: View {
                                 Spacer().frame(width: geometry.size.width / 13)
                                 Rectangle()
                                     .frame(width: 2, height: geometry.size.width / 28.5)
-                                    .foregroundColor(Color("\(CharacterSelect)Color"))
+                                    .foregroundColor(Color("\(characterManager.characterSelect)Color"))
                                 Spacer().frame(width: geometry.size.width / 150)
                                 Text("柊ミロク")
                                     .font(.custom("SFProDisplay-Bold", size: geometry.size.width / 28.5))
                                     .foregroundColor(Color("MainColor"))
-                                    
+                                
                                 Spacer()
                             }
-              
+                            
                             Spacer().frame(height: geometry.size.height / 260)
                             HStack {
                                 Spacer().frame(width: geometry.size.width / 17)
@@ -185,9 +208,11 @@ struct ContentView: View {
                             secondaryButton: .cancel()
                         )
                     }
+                    
                 }
                 Spacer()
             }
+            
             .onTapGesture {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 if isTextFieldFocused {
@@ -201,8 +226,16 @@ struct ContentView: View {
                 } else {
                     print("配列が空です。")
                 }
-
+                for task in todos.filter({ (!$0.isDone && $0.isHide) }).prefix(3) {
+                    print(task.isDone, task.isHide, task.content)
+                }
+                print("#######################################")
+                for task in todos {
+                    print(task.isDone, task.isHide, task.content)
+                }
+                
             }
+            
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
     }
@@ -210,9 +243,10 @@ struct ContentView: View {
     // 新しい Todo を追加する処理
     private func addNewTodo() {
         
-        let newTodo = Todo(content: inputText, isDone: false)
+        let newTodo = Todo(content: inputText, isDone: false, isHide: true)
         context.insert(newTodo)
         try? context.save()
+        WidgetCenter.shared.reloadAllTimelines()
         isNewTodo = true
         inputText = ""
         isTextFieldFocused = true
@@ -223,8 +257,9 @@ struct ContentView: View {
     private func saveTodoEdit() {
         isTextFieldFocused = false
         isTextFieldVisible = false
-        if let editingTodo = editingTodo {
+        if editingTodo != nil {
             try? context.save()  // 変更を保存
+            WidgetCenter.shared.reloadAllTimelines()
             self.editingTodo = nil  // 編集を終了
         }
     }
@@ -235,6 +270,7 @@ struct ContentView: View {
             context.delete(todo)
         }
         try? context.save()
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     private func deleteAllTodos() {
@@ -242,6 +278,7 @@ struct ContentView: View {
             context.delete(todo)
         }
         try? context.save()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

@@ -25,24 +25,39 @@ struct TaskIntent: AppIntent {
 
         let context = ModelContext(sharedModelContainer)
 
-        // タスクの検索
-        let fetchDescriptor = FetchDescriptor<Todo>(predicate: #Predicate { $0.id == taskId })
-        
+        // すべてのタスクの検索（isHideを変更するため）
+        let fetchDescriptorAllTodos = FetchDescriptor<Todo>()
+
+        // 特定のタスクを検索（isDoneを変更するため）
+        let fetchDescriptorSingleTodo = FetchDescriptor<Todo>(predicate: #Predicate { $0.id == taskId })
+
         do {
-            // 該当タスクの取得
-            let todos = try context.fetch(fetchDescriptor)
+            // すべてのタスクを取得し、isHideをトグル
+            let allTodos = try context.fetch(fetchDescriptorAllTodos)
+            for todo in allTodos {
+                todo.isHide = true
+            }
             
-            // タスクが存在する場合、完了状態をトグル
+            // 変更を保存
+            try context.save()
+            
+            // ウィジェットの更新
+            WidgetCenter.shared.reloadAllTimelines()
+            
+            // 特定のタスクを取得し、isDoneをトグル
+            let todos = try context.fetch(fetchDescriptorSingleTodo)
             if let todo = todos.first {
                 todo.isDone.toggle()
-                try context.save() // SwiftDataで保存
-                WidgetCenter.shared.reloadAllTimelines() // ウィジェットの更新
-               
+                todo.isHide.toggle()
+                // 変更を保存
+                try context.save()
+                
+                // ウィジェットの更新
+                WidgetCenter.shared.reloadAllTimelines()
             }
         } catch {
             print("タスクの状態変更に失敗しました: \(error)")
         }
-
         return .result()
     }
 }

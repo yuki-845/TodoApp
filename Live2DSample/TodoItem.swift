@@ -16,11 +16,13 @@ final class Todo {
     var content: String
     var isDone: Bool
     var registerDate: Date
-
-    init(id: UUID = UUID(), content: String, isDone: Bool = false, registerDate: Date = Date()) {
+    var isHide: Bool
+    init(id: UUID = UUID(), content: String, isDone: Bool = false, registerDate: Date = Date(), isHide: Bool = true) {
         self.id = id
         self.content = content
         self.isDone = isDone
         self.registerDate = registerDate
+        self.isHide = isHide
     }
 }
+

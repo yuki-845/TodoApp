@@ -19,8 +19,6 @@
 		5C4C46FB2C9D51BE00937790 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C511F2C961B5200E266FF /* TodoItem.swift */; };
 		5C4C46FD2C9D52FB00937790 /* sharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */; };
 		5C4C46FE2C9D52FB00937790 /* sharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */; };
-		5C4C47002C9D756200937790 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FF2C9D756200937790 /* ViewModel.swift */; };
-		5C4C47012C9D756200937790 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C46FF2C9D756200937790 /* ViewModel.swift */; };
 		5C6C50F82C95F3B400E266FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C50F72C95F3B400E266FF /* Assets.xcassets */; };
 		5C6C510C2C96141A00E266FF /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C51022C96141A00E266FF /* SF-Pro-Display-Medium.otf */; };
 		5C6C510D2C96141A00E266FF /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C6C50FF2C96141A00E266FF /* SF-Pro-Display-HeavyItalic.otf */; };
@@ -46,7 +44,7 @@
 		5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C51282C97CAF500E266FF /* CustomTextField.swift */; };
 		5C6C512B2C97D41800E266FF /* CharacterSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */; };
 		5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512C2C97D8AB00E266FF /* TabedView.swift */; };
-		5CBE06A62C9C1C9000620E7F /* HiragiMikuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */; };
+		5CBE06A62C9C1C9000620E7F /* HiragiMiroku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +88,6 @@
 		5C4C46F92C9D514700937790 /* TOSHESWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TOSHESWidgetExtension.entitlements; sourceTree = "<group>"; };
 		5C4C46FA2C9D518000937790 /* TOSHES.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TOSHES.entitlements; sourceTree = "<group>"; };
 		5C4C46FC2C9D52FB00937790 /* sharedModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedModelContainer.swift; sourceTree = "<group>"; };
-		5C4C46FF2C9D756200937790 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5C6C50F72C95F3B400E266FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6C50FA2C96141A00E266FF /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		5C6C50FB2C96141A00E266FF /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -117,7 +114,7 @@
 		5C6C51282C97CAF500E266FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectView.swift; sourceTree = "<group>"; };
 		5C6C512C2C97D8AB00E266FF /* TabedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabedView.swift; sourceTree = "<group>"; };
-		5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiragiMikuro.swift; sourceTree = "<group>"; };
+		5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiragiMiroku.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -196,7 +193,6 @@
 				5C6C51232C97A82B00E266FF /* Function */,
 				5C6C511E2C96143C00E266FF /* Info.plist */,
 				4CACEBAD2BB04FBC009F3D6C /* Live2DSampleApp.swift */,
-				5C4C46FF2C9D756200937790 /* ViewModel.swift */,
 				5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */,
 				4CACEBAF2BB04FBC009F3D6C /* ContentView.swift */,
 				5C6C512C2C97D8AB00E266FF /* TabedView.swift */,
@@ -257,7 +253,7 @@
 		5CBE06A42C9C04B100620E7F /* Talks */ = {
 			isa = PBXGroup;
 			children = (
-				5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */,
+				5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */,
 			);
 			path = Talks;
 			sourceTree = "<group>";
@@ -397,12 +393,11 @@
 				5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */,
 				5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */,
 				4CFF845E2BE179C5006A6008 /* Live2DView.swift in Sources */,
-				5C4C47002C9D756200937790 /* ViewModel.swift in Sources */,
 				4CACEBB02BB04FBC009F3D6C /* ContentView.swift in Sources */,
 				4CACEBAE2BB04FBC009F3D6C /* Live2DSampleApp.swift in Sources */,
 				4CFF845C2BE1794E006A6008 /* MetalShaders.metal in Sources */,
 				5C6C51222C969F0F00E266FF /* KeyboardResponder.swift in Sources */,
-				5CBE06A62C9C1C9000620E7F /* HiragiMikuro.swift in Sources */,
+				5CBE06A62C9C1C9000620E7F /* HiragiMiroku.swift in Sources */,
 				5C6C512B2C97D41800E266FF /* CharacterSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +408,6 @@
 			files = (
 				5C4C46FE2C9D52FB00937790 /* sharedModelContainer.swift in Sources */,
 				5C4C46FB2C9D51BE00937790 /* TodoItem.swift in Sources */,
-				5C4C47012C9D756200937790 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				ENABLE_PREVIEWS = YES;
@@ -574,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -595,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				ENABLE_PREVIEWS = YES;
@@ -613,7 +607,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -634,7 +628,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TOSHESWidget/Info.plist;
@@ -646,7 +640,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -663,7 +657,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TOSHESWidget/Info.plist;
@@ -675,7 +669,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

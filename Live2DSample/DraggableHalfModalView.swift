@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 import SwiftData
 
 
@@ -135,6 +136,13 @@ struct DraggableHalfModalView: View {
     // チェック状態の更新
     private func check(index: Int) {
         todos[index].isDone.toggle()
-        try? context.save()
+        
+        
+        do {
+            try context.save() // SwiftDataで保存
+        } catch {
+            print("Error saving data: \(error)") // 保存失敗時のエラーハンドリング
+        }
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
