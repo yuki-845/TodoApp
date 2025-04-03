@@ -205,7 +205,7 @@ struct ContentView: View {
                 for task in todos.filter({ (!$0.isDone && $0.isHide) }).prefix(3) {
                     print(task.isDone, task.isHide, task.content)
                 }
-                print("#######################################")
+               
                 for task in todos {
                     print(task.isDone, task.isHide, task.content)
                 }
