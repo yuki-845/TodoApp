@@ -179,6 +179,7 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<TaskEntry>) -> ()) {
         // タスクリストを取得
             let taskList = fetchTodos()
+
             // 現在の時刻
             let currentDate = Date()
 

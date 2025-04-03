@@ -44,7 +44,7 @@
 		5C6C51292C97CAF500E266FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C51282C97CAF500E266FF /* CustomTextField.swift */; };
 		5C6C512B2C97D41800E266FF /* CharacterSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */; };
 		5C6C512D2C97D8AB00E266FF /* TabedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6C512C2C97D8AB00E266FF /* TabedView.swift */; };
-		5CBE06A62C9C1C9000620E7F /* HiragiMiroku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */; };
+		5CBE06A62C9C1C9000620E7F /* HiragiMikuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +114,7 @@
 		5C6C51282C97CAF500E266FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5C6C512A2C97D41800E266FF /* CharacterSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectView.swift; sourceTree = "<group>"; };
 		5C6C512C2C97D8AB00E266FF /* TabedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabedView.swift; sourceTree = "<group>"; };
-		5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiragiMiroku.swift; sourceTree = "<group>"; };
+		5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiragiMikuro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -253,7 +253,7 @@
 		5CBE06A42C9C04B100620E7F /* Talks */ = {
 			isa = PBXGroup;
 			children = (
-				5CBE06A52C9C1C9000620E7F /* HiragiMiroku.swift */,
+				5CBE06A52C9C1C9000620E7F /* HiragiMikuro.swift */,
 			);
 			path = Talks;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 				4CACEBAE2BB04FBC009F3D6C /* Live2DSampleApp.swift in Sources */,
 				4CFF845C2BE1794E006A6008 /* MetalShaders.metal in Sources */,
 				5C6C51222C969F0F00E266FF /* KeyboardResponder.swift in Sources */,
-				5CBE06A62C9C1C9000620E7F /* HiragiMiroku.swift in Sources */,
+				5CBE06A62C9C1C9000620E7F /* HiragiMikuro.swift in Sources */,
 				5C6C512B2C97D41800E266FF /* CharacterSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				ENABLE_PREVIEWS = YES;
@@ -568,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -589,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TOSHES.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Live2DSample/Preview Content\"";
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				ENABLE_PREVIEWS = YES;
@@ -607,7 +607,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -628,7 +628,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TOSHESWidget/Info.plist;
@@ -640,7 +640,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -657,7 +657,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = TOSHESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YTQW99BMDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TOSHESWidget/Info.plist;
@@ -669,7 +669,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = toshes.com.TOSHESWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
